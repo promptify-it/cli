@@ -1,0 +1,79 @@
+{
+    "name": "promptify-it/cli",
+    "description": "The official promptify-it cli.",
+    "keywords": [
+        "framework",
+        "laravel",
+        "laravel zero",
+        "console",
+        "cli"
+    ],
+    "homepage": "https://laravel-zero.com",
+    "type": "project",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
+        "source": "https://github.com/laravel-zero/laravel-zero"
+    },
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2.0",
+        "illuminate/http": "^11.5",
+        "laravel-zero/framework": "^11.0.0",
+        "promptify-it/promptify-it": "dev-develop"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.15.2",
+        "mockery/mockery": "^1.6.11",
+        "pestphp/pest": "^2.34.7",
+        "configured/haulable": "^0.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "bin": [
+        "application"
+    ],
+    "scripts": {
+        "build": [
+            "rm -rf ./builds",
+            "php application app:build pfy",
+            "haulable ./builds/pfy --platform=\"All Platforms\"",
+            "mv linux_aarch64 ./builds && chmod 755 ./builds/linux_aarch64/pfy",
+            "mv linux_x86_64 ./builds && chmod 755 ./builds/linux_x86_64/pfy",
+            "mv macos_intel ./builds && chmod 755 ./builds/macos_intel/pfy",
+            "mv macos_apple ./builds && chmod 755 ./builds/macos_apple/pfy",
+            "mv windows_x64 ./builds && chmod 755 ./builds/windows_x64/pfy.exe"
+        ]
+    },
+    "repositories": {
+        "promptify-it/promptify-it": {
+            "type": "github",
+            "url": "https://github.com/promptify-it/core"
+        }
+    }
+}
