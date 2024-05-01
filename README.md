@@ -7,7 +7,7 @@
 ### Installation
 
 ```bash
-curl -s https://raw.githubusercontent.com/promptify-it/cli/main/install.sh | bash
+curl -s https://raw.githubusercontent.com/promptify-it/cli/main/installer.sh | bash
 ```
 
 ## License
