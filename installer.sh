@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# GitHub repository URL
-REPO_URL="https://github.com/dedecube/dynamic-cli"
+USERNAME="promptify-it"
+REPO="cli"
+REPO_URL="https://github.com/promptify-it/cli"
+
+# Get the latest release tag name
+latest_release=$(curl -s "https://api.github.com/repos/$USERNAME/$REPO/releases/latest")
 
 # Function to detect the user's platform
 detect_platform() {
@@ -40,35 +44,39 @@ detect_platform() {
 # Function to download the appropriate build based on platform
 download_build() {
     PLATFORM=$1
+
+    DOWNLOAD_URL=$(curl -s "https://api.github.com/repos/$USERNAME/$REPO/releases/latest" | jq -r --arg PLATFORM "$PLATFORM" '.assets[] | select(.name | contains($PLATFORM)) | .browser_download_url')
+    FILE_NAME=pfy_${PLATFORM}
+
     case "$PLATFORM" in
         linux_x86_64)
-            # Download Linux x86_64 build
-            curl -LOs "$REPO_URL/builds/linux_x86_64/dcli"
-            chmod +x dcli
-            sudo mv dcli /usr/local/bin/
+            curl -LOs $DOWNLOAD_URL
+            chmod +x ${FILE_NAME}
+            mv ${FILE_NAME} pfy
+            sudo mv pfy /usr/local/bin/
             ;;
         linux_aarch64)
-            # Download Linux aarch64 build
-            curl -LOs "$REPO_URL/builds/linux_aarch64/dcli"
-            chmod +x dcli
-            sudo mv dcli /usr/local/bin/
+            curl -LOs $DOWNLOAD_URL
+            chmod +x ${FILE_NAME}
+            mv ${FILE_NAME} pfy
+            sudo mv pfy /usr/local/bin/
             ;;
         macos_intel)
-            # Download macOS Intel build
-            curl -LOs "$REPO_URL/builds/macos_intel/dcli"
-            chmod +x dcli
-            sudo mv dcli /usr/local/bin/
+            curl -LOs $DOWNLOAD_URL
+            chmod +x ${FILE_NAME}
+            mv ${FILE_NAME} pfy
+            sudo mv pfy /usr/local/bin/
             ;;
         macos_apple)
-            # Download macOS Apple Silicon build
-            curl -LOs "$REPO_URL/builds/macos_apple/dcli"
-            chmod +x dcli
-            sudo mv dcli /usr/local/bin/
+            curl -LOs $DOWNLOAD_URL
+            chmod +x ${FILE_NAME}
+            mv ${FILE_NAME} pfy
+            sudo mv pfy /usr/local/bin/
             ;;
         windows_x64)
             # Download Windows x64 build
-            curl -LOs "$REPO_URL/builds/windows_x64/dcli.exe"
-            echo "For Windows, please move the dcli.exe file to a directory in your PATH manually."
+            curl -LOs $DOWNLOAD_URL
+            echo "For Windows, please move the pfy.exe file to a directory in your PATH manually."
             ;;
         *)
             echo "Unsupported platform"
@@ -77,13 +85,9 @@ download_build() {
     esac
 }
 
-# Main function
 main() {
     PLATFORM=$(detect_platform)
     download_build "$PLATFORM"
-    # download_bash_autocomplete
-    # download_zsh_autocomplete
 }
 
-# Execute the main function
 main
