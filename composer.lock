@@ -4360,12 +4360,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/promptify-it/core.git",
-                "reference": "36502e684c1a3411f2b2570d29bc8603f1a5f54d"
+                "reference": "2a6f1c8621a44d3a8972104f7a9611dc02ff5776"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/promptify-it/core/zipball/36502e684c1a3411f2b2570d29bc8603f1a5f54d",
-                "reference": "36502e684c1a3411f2b2570d29bc8603f1a5f54d",
+                "url": "https://api.github.com/repos/promptify-it/core/zipball/2a6f1c8621a44d3a8972104f7a9611dc02ff5776",
+                "reference": "2a6f1c8621a44d3a8972104f7a9611dc02ff5776",
                 "shasum": ""
             },
             "require": {
@@ -4459,7 +4459,7 @@
                 "promptify-it"
             ],
             "support": {
-                "source": "https://github.com/promptify-it/core/tree/develop",
+                "source": "https://github.com/promptify-it/core/tree/main",
                 "issues": "https://github.com/promptify-it/core/issues"
             },
             "funding": [
@@ -4468,7 +4468,7 @@
                     "url": "https://github.com/promptify-it"
                 }
             ],
-            "time": "2024-05-19T04:22:00+00:00"
+            "time": "2024-05-19T08:40:28+00:00"
         },
         {
             "name": "psr/clock",
