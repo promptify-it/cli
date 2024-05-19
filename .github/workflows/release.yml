@@ -30,6 +30,8 @@ jobs:
 
       - name: Build binaries
         run: composer build
+        env:
+          VERSION: ${{ github.ref_name }}
 
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
