@@ -25,7 +25,7 @@
         "php": "^8.2.0",
         "illuminate/http": "^11.5",
         "laravel-zero/framework": "^11.0.0",
-        "promptify-it/promptify-it": "dev-develop"
+        "promptify-it/promptify-it": "dev-main"
     },
     "require-dev": {
         "laravel/pint": "^1.15.2",
@@ -53,7 +53,7 @@
             "pestphp/pest-plugin": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "bin": [
         "application"
@@ -61,7 +61,7 @@
     "scripts": {
         "build": [
             "rm -rf ./builds",
-            "php application app:build pfy",
+            "php application app:build pfy --build-version=$VERSION",
             "haulable ./builds/pfy --platform=\"All Platforms\"",
             "mv linux_aarch64/pfy ./builds/pfy_linux_aarch64 && chmod 755 ./builds/pfy_linux_aarch64",
             "mv linux_x86_64/pfy ./builds/pfy_linux_x86_64 && chmod 755 ./builds/pfy_linux_x86_64",
