@@ -4343,12 +4343,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/promptify-it/core.git",
-                "reference": "8877c726cd7fa1c61378d6fdbf33d9bc0a18eec4"
+                "reference": "f28f8613c88ca75516e959a8e128daa825f341d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/promptify-it/core/zipball/8877c726cd7fa1c61378d6fdbf33d9bc0a18eec4",
-                "reference": "8877c726cd7fa1c61378d6fdbf33d9bc0a18eec4",
+                "url": "https://api.github.com/repos/promptify-it/core/zipball/f28f8613c88ca75516e959a8e128daa825f341d6",
+                "reference": "f28f8613c88ca75516e959a8e128daa825f341d6",
                 "shasum": ""
             },
             "require": {
@@ -4452,7 +4452,7 @@
                     "url": "https://github.com/promptify-it"
                 }
             ],
-            "time": "2024-05-30T07:06:18+00:00"
+            "time": "2024-06-03T08:04:39+00:00"
         },
         {
             "name": "psr/clock",
