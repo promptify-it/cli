@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Providers;
+namespace Pfy\Cli\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use PromptifyIt\PromptifyIt\Contracts\CommandFactory;
-use PromptifyIt\PromptifyIt\Contracts\Loader;
+use Pfy\Core\Contracts\CommandFactory;
+use Pfy\Core\Contracts\Loader;
 
 class AppServiceProvider extends ServiceProvider
 {

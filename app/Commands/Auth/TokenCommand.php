@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Commands\Auth;
+namespace Pfy\Cli\Commands\Auth;
 
-use Illuminate\Support\Facades\Http;
 use LaravelZero\Framework\Commands\Command;
-use PromptifyIt\PromptifyIt\Contracts\Authenticator;
+use Pfy\Core\Contracts\Authenticator;
 
 use function Laravel\Prompts\password;
 

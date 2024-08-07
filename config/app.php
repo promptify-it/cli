@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => 'PromptifyIt',
+    'name' => 'Pfy CLI',
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     */
 
     'providers' => [
-        App\Providers\AppServiceProvider::class,
+        \Pfy\Cli\Providers\AppServiceProvider::class,
     ],
 
 ];

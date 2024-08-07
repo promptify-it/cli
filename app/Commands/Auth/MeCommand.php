@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Commands\Auth;
+namespace Pfy\Cli\Commands\Auth;
 
 use LaravelZero\Framework\Commands\Command;
-use PromptifyIt\PromptifyIt\Contracts\Authenticator;
+use Pfy\Core\Contracts\Authenticator;
 
 class MeCommand extends Command
 {

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    App\Providers\AppServiceProvider::class,
+    \Pfy\Cli\Providers\AppServiceProvider::class,
     \Spatie\LaravelData\LaravelDataServiceProvider::class,
-    \PromptifyIt\PromptifyIt\PromptifyItServiceProvider::class,
+    \Pfy\Core\PromptifyItServiceProvider::class,
 ];
