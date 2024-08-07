@@ -1,6 +1,7 @@
 {
     "name": "promptify-it/cli",
     "description": "The official promptify-it cli.",
+    "version": "0.1.3",
     "keywords": [
         "framework",
         "laravel",
@@ -8,12 +9,12 @@
         "console",
         "cli"
     ],
-    "homepage": "https://laravel-zero.com",
+    "homepage": "https://pfy.dedecube.com",
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
-        "source": "https://github.com/laravel-zero/laravel-zero"
+        "issues": "https://github.com/promptify-it/cli/issues",
+        "source": "https://github.com/promptify-it/cli"
     },
     "authors": [
         {
