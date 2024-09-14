@@ -1,7 +1,7 @@
 {
     "name": "promptify-it/cli",
     "description": "The official promptify-it cli.",
-    "version": "0.1.3",
+    "version": "0.1.0",
     "keywords": [
         "framework",
         "laravel",
@@ -30,7 +30,7 @@
         "php": "^8.2",
         "illuminate/http": "^11.5",
         "laravel-zero/framework": "^11.0.0",
-        "promptify-it/promptify-it": "dev-main"
+        "promptify-it/promptify-it": "^0.1.0"
     },
     "require-dev": {
         "configured/haulable": "^0.4.0"
@@ -73,10 +73,14 @@
             "rm -rf ./linux_aarch64 ./linux_x86_64 ./macos_intel ./macos_apple ./windows_x64"
         ]
     },
-    "repositories": {
-        "promptify-it/promptify-it": {
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../packages/core"
+        },
+        {
             "type": "github",
             "url": "https://github.com/promptify-it/core"
         }
-    }
+    ]
 }
