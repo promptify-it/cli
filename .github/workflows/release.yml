@@ -20,6 +20,9 @@ jobs:
           extensions: mbstring, intl, zip, pcntl, bcmath, gd
           coverage: none
 
+      - name: Configure composer
+        run: php scripts/configure-composer.php
+
       - name: Install composer on the host
         run: |
           curl -sS https://getcomposer.org/installer | php

@@ -30,7 +30,7 @@
         "php": "^8.2",
         "illuminate/http": "^11.5",
         "laravel-zero/framework": "^11.0.0",
-        "promptify-it/promptify-it": "^0.1.0"
+        "promptify-it/promptify-it": "*"
     },
     "require-dev": {
         "configured/haulable": "^0.4.0"
@@ -76,11 +76,10 @@
     "repositories": [
         {
             "type": "path",
-            "url": "../../packages/core"
-        },
-        {
-            "type": "github",
-            "url": "https://github.com/promptify-it/core"
+            "url": "../../packages/core",
+            "options": {
+                "symlink": true
+            }
         }
     ]
 }
